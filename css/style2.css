@@ -1,0 +1,66 @@
+/* Navbar untuk layar besar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2E7D32;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Merriweather', serif;
+  transition: all 0.3s ease;
+}
+
+.navbar1 {
+  display: none; /* Default disembunyikan */
+}
+
+/* Gaya navigasi */
+.navlink {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navlink li {
+  margin: 0 20px;
+}
+
+.navlink a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navlink a:hover {
+  color: #333;
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 800px) {
+  .navbar {
+    display: none; /* Navbar besar disembunyikan */
+  }
+
+  .navbar1 {
+    display: flex; /* Navbar kecil ditampilkan */
+    justify-content: center;
+    align-items: center;
+    background-color: #2E7D32;
+    padding: 10px;
+  }
+
+  .navlink {
+    flex-direction: column; /* Link vertikal */
+    align-items: center;
+  }
+
+  .navlink li {
+    margin: 10px 0;
+  }
+}

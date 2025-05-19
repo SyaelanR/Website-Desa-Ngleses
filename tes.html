@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Textarea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+            margin: 0;
+        }
+
+        .form-group {
+            position: relative;
+            width: 300px;
+            margin: 20px;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+            background: transparent;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group textarea:focus {
+            border-color: #007bff;
+        }
+
+        .form-group span {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            color: #aaa;
+            font-size: 16px;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group textarea:focus + span,
+        .form-group textarea:not(:placeholder-shown) + span {
+            top: -10px;
+            left: 10px;
+            font-size: 14px;
+            color: #007bff;
+            background-color: #f3f4f6;
+            padding: 0 5px;
+        }
+
+        .form-group .border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #007bff;
+            transition: width 0.3s;
+        }
+
+        .form-group textarea:focus ~ .border {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <label class="form-group">
+        <textarea name="" id="" required placeholder=" "></textarea>
+        <span>Pesan</span>
+        <span class="border"></span>
+    </label>
+</body>
+</html>
